@@ -1,0 +1,25 @@
+button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 15px 25px;
+	gap: 10px;
+	min-height: 52px;
+	border-radius: 10px;
+	border: unset;
+	user-select: none;
+
+	font-family: "OpenSans", system-ui;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+
+	background-color: var(--color_primany_003);
+	color: var(--color_primany_001);
+
+	&:hover {
+		cursor: pointer;
+		background-color: var(--color_primany_007);
+	}
+}

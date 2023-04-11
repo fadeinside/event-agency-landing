@@ -1,0 +1,14 @@
+.line {
+	width: 100%;
+	height: 1px;
+
+	.vertical {
+		width: 1px;
+		height: 100%;
+	}
+}
+
+#ID_GLOBAL_HEADER_MENU {
+	transition: all 400ms;
+	border-color: transparent;
+}
