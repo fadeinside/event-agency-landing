@@ -18,52 +18,257 @@
 
 	<!-- SCRIPTS & CSS-->
 	<link href="/styles.css" rel="stylesheet">
+	<script src="/javascript/jquery.js" type="text/javascript"></script>
+	<script src="/javascript/scripts.js" type="text/javascript"></script>
 </head>
 
 <body>
-	<div class="flex dir-row ai-start jc-center w-100">
-		<div class="flex dir-column ai-center gap-100px max-w-1540px w-100">
-			<div class="absolute crop z-n1">
-				<img src="/assets/uploads/VectorTop.svg" alt="" width="100%">
-			</div>
-
-			<div class="absolute crop z-n1" style="top: 300px">
-				<img src="/assets/uploads/VectorTop.svg" alt="" width="100%">
+	<div class="relative flex dir-row ai-start jc-center w-100 crop">
+		<div class="adapt-container-31717 flex dir-column ai-center gap-100px max-w-1540px w-100">
+			<div class="absolute top-0px crop z-n1">
+				<img src="/assets/uploads/VectorTop.svg" alt="">
 			</div>
 
 			<!-- Хедер -->
 			<div class="flex dir-row jc-spabet ai-center">
 				<img src="/assets/images/logo-removebg-preview.png" alt="" width="158px" height="126px">
-				<div class="flex dir-row ai-center gap-40px w-fit">
-					<a>Главная</a>
-					<a>Акции</a>
-					<a>О нас</a>
-					<button>
+				<div class="breakpoint-pc flex dir-row ai-center gap-40px w-fit">
+					<a href="#">Главная</a>
+					<a href="#stocks">Акции</a>
+					<a href="#about">О нас</a>
+					<button href="/">
 						<span>Личный кабинет</span>
 						<img src="/assets/icons/users.svg" alt="">
 					</button>
 				</div>
+				<button data-bottombar="_BOTTOMBAR-MobileMenu" class="breakpoint-phone">
+					<span>Меню</span>
+					<img src="/assets/icons/users.svg" alt="">
+				</button>
 			</div>
 
-			<div class="flex dir-column jc-center ai-center gap-10px min-h-630px">
+			<!-- Мобилное меню -->
+			<div data-for="_BOTTOMBAR-MobileMenu" class="bottombar-custom flex dir-column gap-10px col-bg-006 padd-20px radius-12px">
+				<button href="#" class="w-100 jc-center col-bg-opaque">Главная</button>
+				<button href="#stocks" class="w-100 jc-center col-bg-opaque">Акции</button>
+				<button href="#about" class="w-100 jc-center col-bg-opaque">О нас</button>
+				<button href="/" class="w-100 jc-center">
+					<span>Личный кабинет</span>
+					<img src="/assets/icons/users.svg" alt="">
+				</button>
+			</div>
 
+			<!-- Приветствие -->
+			<div class="flex dir-row jc-center ai-center gap-50px min-h-630px wrap">
+				<div class="relative">
+					<img id="ID_WELCOME_IMAGE" src="/assets/uploads/0b2550e4729a5fdb44db4a4188600e43.jpeg" alt="" width="595px" class="radius-12px">
+					<img id="ID_WELCOME_IMAGE" src="/assets/uploads/0b2550e4729a5fdb44db4a4188600e43.jpeg" alt="" width="595px" class="absolute top-0px left-0px blur-50px z-n1">
+				</div>
 				<div class="flex dir-column ai-center gap-45px w-fit">
 					<div class="flex dir-column ai-center gap-10px">
-						<h3 class="col-001">Подарим волшебство для Ваших детей!</h3>
-						<h5 class="col-001">Event-agency, организовывающее детские праздники.</h5>
+						<h3 class="col-001 col-bg-006">Подарим волшебство для Ваших детей!</h3>
+						<h5 class="col-001 col-bg-006">Event-agency, организовывающее детские праздники.</h5>
 					</div>
 					<div class="flex dir-row ai-center gap-10px">
-						<button><img src="/assets/icons/gift.svg" alt=""> <span>Забронировать</span></button>
-						<button><img src="/assets/icons/book-2.svg" alt=""> <span>О Компании</span></button>
+						<button href="/"><img src="/assets/icons/gift.svg" alt=""> <span>Забронировать</span></button>
+						<button href="/"><img src="/assets/icons/book-2.svg" alt=""> <span>О Компании</span></button>
 					</div>
 				</div>
+			</div>
 
+			<!-- Почему мы -->
+			<div class="flex dir-column ai-center gap-45px padd-t-85px" id="about">
+				<h3>Почему именно мы?</h3>
+				<div class="flex dir-row jc-center ai-center gap-50px wrap">
+
+					<!-- 1 -->
+					<div class="flex dir-column ai-start gap-5px max-w-300px">
+						<img src="/assets/icons/thumb-up.svg" alt="">
+						<h6>Работаем ответственно</h6>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an...</p>
+					</div>
+					<!-- 2 -->
+					<div class="flex dir-column ai-start gap-5px max-w-300px">
+						<img src="/assets/icons/thumb-up.svg" alt="">
+						<h6>Работаем ответственно</h6>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an...</p>
+					</div>
+					<!-- 3 -->
+					<div class="flex dir-column ai-start gap-5px max-w-300px">
+						<img src="/assets/icons/thumb-up.svg" alt="">
+						<h6>Работаем ответственно</h6>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an...</p>
+					</div>
+					<!-- 4 -->
+					<div class="flex dir-column ai-start gap-5px max-w-300px">
+						<img src="/assets/icons/thumb-up.svg" alt="">
+						<h6>Работаем ответственно</h6>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an...</p>
+					</div>
+					
+				</div>
+			</div>
+
+			<!-- Что говорят о нас -->
+			<div class="flex dir-row ai-center jc-center gap-50px wrap">
+				<div class="flex dir-row ai-start gap-20px w-fit">
+					<img src="/assets/uploads/1cff4ab61916d8c5eda81d239c01c6b2.jpeg" alt="" width="595px" class="shadow-10x100 radius-12px">
+					<img src="/assets/uploads/0b2550e4729a5fdb44db4a4188600e43.jpeg" alt="" width="595px" class="shadow-10x100 radius-12px">
+					<img src="/assets/uploads/orig.jpg" alt="" width="595px" height="396.83px" class="shadow-10x100 radius-12px">
+				</div>
+				<div class="flex dir-column ai-start gap-10px">
+					<div class="flex dir-column ai-start gap-30px w-100 scroll-X">
+						<h2 class="sticky left-0px">Вот что говорят о нас</h2>
+						<div class="flex dir-row ai-start gap-20px w-fit">
+
+							<!-- 1 -->
+							<div class="bloop flex dir-column ai-start padd-20px gap-10px col-bg-003 radius-12px w-380px">
+								<h6 class="col-001">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown...</h6>
+								<div class="flex dir-row ai-center gap-20px">
+									<img src="/assets/uploads/v2_0012085.png" alt="" width="40px" height="40px" class="radius-40px">
+									<p class="col-001">Иван Иванов</p>
+								</div>
+							</div>
+							<!-- 1 -->
+							<div class="bloop flex dir-column ai-start padd-20px gap-10px col-bg-003 radius-12px w-380px">
+								<h6 class="col-001">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown...</h6>
+								<div class="flex dir-row ai-center gap-20px">
+									<img src="/assets/uploads/v2_0012085.png" alt="" width="40px" height="40px" class="radius-40px">
+									<p class="col-001">Иван Иванов</p>
+								</div>
+							</div>
+							<!-- 3 -->
+							<div class="bloop flex dir-column ai-start padd-20px gap-10px col-bg-003 radius-12px w-380px">
+								<h6 class="col-001">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown...</h6>
+								<div class="flex dir-row ai-center gap-20px">
+									<img src="/assets/uploads/v2_0012085.png" alt="" width="40px" height="40px" class="radius-40px">
+									<p class="col-001">Иван Иванов</p>
+								</div>
+							</div>
+							<!-- 4 -->
+							<div class="bloop flex dir-column ai-start padd-20px gap-10px col-bg-003 radius-12px w-380px">
+								<h6 class="col-001">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown...</h6>
+								<div class="flex dir-row ai-center gap-20px">
+									<img src="/assets/uploads/v2_0012085.png" alt="" width="40px" height="40px" class="radius-40px">
+									<p class="col-001">Иван Иванов</p>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Акции -->
+			<div class="flex dir-column ai-center padd-b-150px" id="stocks">
+				<div class="flex dir-column gap-30px w-100 scroll-X">
+					<div class="sticky left-0px flex dir-row ai-center jc-center gap-10px">
+						<h2>Акции</h2>
+					</div>
+					<div class="flex dir-row jc-center ai-center gap-20px w-fit">
+					
+						<!-- 1 -->
+						<div class="bloop flex dir-column ai-start padd-20px gap-15px col-bg-003 radius-12px w-380px">
+							<h6 class="col-001">Скидка до 25%. Закажи праздник "Под ключ"</h6>
+							<p class="col-001">При выборе локации для 15 человек и больше, а также при заказе всех дополнительных услуг можно очень неплохо сэкономить!<br>Купон действует на следующие виды услуг:<br>
+							— Скидка 25% для организации комплексного праздника для группы от 25 человек.
+							— Скидка 10% для организации комплексного праздника для группы от 15 человек.<br>
+							Обязательна предварительная запись по телефону.</p>
+						</div>
+						<!-- 2 -->
+						<div class="bloop flex dir-column ai-start padd-20px gap-15px col-bg-003 radius-12px w-380px">
+							<h6 class="col-001">Скидка до 25%. Закажи праздник "Под ключ"</h6>
+							<p class="col-001">При выборе локации для 15 человек и больше, а также при заказе всех дополнительных услуг можно очень неплохо сэкономить!<br>Купон действует на следующие виды услуг:<br>
+							— Скидка 25% для организации комплексного праздника для группы от 25 человек.
+							— Скидка 10% для организации комплексного праздника для группы от 15 человек.<br>
+							Обязательна предварительная запись по телефону.</p>
+						</div>
+						<!-- 3 -->
+						<div class="bloop flex dir-column ai-start padd-20px gap-15px col-bg-003 radius-12px w-380px">
+							<h6 class="col-001">Скидка до 25%. Закажи праздник "Под ключ"</h6>
+							<p class="col-001">При выборе локации для 15 человек и больше, а также при заказе всех дополнительных услуг можно очень неплохо сэкономить!<br>Купон действует на следующие виды услуг:<br>
+							— Скидка 25% для организации комплексного праздника для группы от 25 человек.
+							— Скидка 10% для организации комплексного праздника для группы от 15 человек.<br>
+							Обязательна предварительная запись по телефону.</p>
+						</div>
+						<!-- 4 -->
+						<div class="bloop flex dir-column ai-start padd-20px gap-15px col-bg-003 radius-12px w-380px">
+							<h6 class="col-001">Скидка до 25%. Закажи праздник "Под ключ"</h6>
+							<p class="col-001">При выборе локации для 15 человек и больше, а также при заказе всех дополнительных услуг можно очень неплохо сэкономить!<br>Купон действует на следующие виды услуг:<br>
+							— Скидка 25% для организации комплексного праздника для группы от 25 человек.
+							— Скидка 10% для организации комплексного праздника для группы от 15 человек.<br>
+							Обязательна предварительная запись по телефону.</p>
+						</div>
+						
+					</div>
+				</div>
+				<form id="ID_FORM" class="flex dir-row ai-center jc-center gap-10px wrap">
+					<p class="fs medium">Подписаться на закрытые акции:</p>
+					<input type="email" placeholder="example@ya.ru" required>
+					<button type="submit">Подписаться</button>
+				</form>
+			</div>
+
+			<!-- Отправтесь в путешествие -->
+			<div class="flex dir-column jc-center ai-center gap-10px">
+				<form id="ID_FORM_FOOTER" class="flex dir-column ai-center gap-50px">
+					<h2 class="col-001 col-bg-006">Готовы отправиться в приключение?</h2>
+					<div class="flex dir-row ai-center gap-10px wrap w-fit">
+
+						<!-- Регион -->
+						<select class="footer-inputs" name="region" id="region">
+							<option value="0">Регион</option>
+							<option value="moscow">Москва</option>
+							<option value="piter">Санкт-Питербург</option>
+						</select>
+						<!-- Локация -->
+						<select class="footer-inputs" name="location" id="location">
+							<option value="0">Выбор локации</option>
+							<option value="sokolniki">Парк Сокольники</option>
+							<option value="museym-gorkogo">Музей Парка Горького</option>
+							<option value="izmailovskiy-park">Измайловский парк</option>
+						</select>
+						<!-- Дата -->
+						<input class="footer-inputs" type="date" id="date" placeholder="Дата мероприятия">
+						<!-- Зоны -->
+						<select class="footer-inputs" name="zones" id="zones">
+							<option value="0">Количество свободных зон</option>
+							<option value="2">2 места</option>
+							<option value="4">4 места</option>
+							<option value="5">8 мест</option>
+						</select>
+						
+					</div>
+					<button type="submit">
+						<img src="/assets/icons/train.svg" alt="">
+						<span>В Путешествие</span>
+					</button>
+				</form>
+			</div>
+
+			
+			<!-- Футер -->
+			<div class="flex dir-column jc-end ai-start gap-10px padd-b-30px">
+				<div class="flex dir-row ai-start gap-50px w-fit wrap">
+					<img src="/assets/images/logo-removebg-preview.png" alt="">
+
+					<!-- 1 -->
+					<div class="flex dir-column ai-start gap-15px w-fit">
+						<a href="/">На главную</a>
+						<a href="/">В личный кабинет</a>
+						<a href="/">Связаться с нами</a>
+					</div>
+					<!-- 2 -->
+					<div class="flex dir-column ai-start gap-15px w-fit">
+						<a href="/">Новости</a>
+						<a href="/">Отзывы</a>
+					</div>
+					
+				</div>
 			</div>
 		</div>
+		<div class="absolute bottom-0px crop z-n1">
+			<img src="/assets/uploads/VectorBottom.svg" alt="">
+		</div>
 	</div>
-
-	
-
-
-	<div style="height: 2000px;"></div>
 </body>

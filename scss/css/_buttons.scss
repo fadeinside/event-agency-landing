@@ -1,10 +1,11 @@
+.footer-inputs,
 button {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	padding: 15px 25px;
 	gap: 10px;
-	min-height: 52px;
+	appearance: none;
 	border-radius: 10px;
 	border: unset;
 	user-select: none;

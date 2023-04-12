@@ -1,0 +1,44 @@
+
+@keyframes keyframe-ripplescale {
+	to {
+		transform: translate(-50%, -50%) scale(3);
+		opacity: 0%;
+	}
+}
+
+button:not([disabled]) {
+	&:focus {
+		transition: 0.08s;
+	}
+	&:active {
+		transition: 0.08s;
+		scale: 0.98;
+	}
+}
+
+button:not([disabled]) {
+	overflow: hidden;
+	&:not(.noRipple) {
+		position: relative;
+	};
+	
+	.ripple {
+		filter: blur(10px);
+		position: absolute;
+		transform: translate(-50%, -50%) scale(0);
+		background-color: var(--color_primany_003);
+		border-radius: 50%;
+		opacity: 30%;
+		animation: keyframe-ripplescale 600ms ease-out;
+		min-width: 120px;
+		min-height: 120px;
+	}
+}
+
+.bloop {
+	transition: transform 200ms linear;
+	&:hover {
+		cursor: pointer;
+		transform: scale(1.03);
+	}
+}

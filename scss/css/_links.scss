@@ -8,10 +8,12 @@ a {
 		}
 	}
 	
+	text-decoration: none;
 	color: var(--color_primany_001);
 
 	&:hover {
-		color: var(--color_primany_001) !important;
+		text-decoration: unset;
+		color: var(--color_primany_003) !important;
 	}
 
 	&.noLine {

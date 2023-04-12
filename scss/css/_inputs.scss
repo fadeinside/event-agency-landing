@@ -1,55 +1,46 @@
-input[type=checkbox][switcher] {
-	height: 0;
-	width: 0;
-	display: none;
+.inputLike,
+input:not([type="checkbox"], [type="date"]),
+textarea {
+	resize: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 25px;
+	gap: 20px;
+	min-height: 51px;
+	border-radius: 6px;
+	border: unset;
+	box-sizing: border-box;
 
-	&:checked + label {
-		background: var(--color_primany_001);
-		&:after {
-			background: var(--color_primany_007);
-		}
-		border-color: var(--color_primany_007);
+	font-family: "OpenSans", system-ui;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+
+	outline-style: solid;
+	outline-width: 1px;
+	outline-color: var(--color_primany_000);
+	background-color: var(--color_primany_001);
+	color: var(--color_primany_002);
+
+	&:autofill {
+		-webkit-text-fill-color: var(--color_primany_002);
+		-webkit-box-shadow: 0 0 0px 1000px var(--color_primany_000) inset;
+		transition: background-color infinite ease-in-out 0s;
 	}
-	
-	&:checked + label:after {
-		left: calc(100% - 4px);
-		transform: translateX(-100%);
+
+	&::placeholder {
+		color: var(--color_primany_004);
 	}
-}
 
-label[switcher] {
-	cursor: pointer;
-	text-align: right;
-	justify-items: center;
-	overflow: hidden;
-	text-indent: 100%;
-	width: 44px;
-	height: 22px;
-	background-color: var(--color_primany_007);
-	border: 2px solid var(--color_primany_002);
-	display: block;
-	border-radius: 22px;
-	position: relative;
-	user-select: none;
-
+	&:focus,
 	&:hover {
+		cursor: text;
+		outline-style: solid;
+		outline-width: 1px;
+		outline-color: var(--color_primany_003);
 		background-color: var(--color_primany_001);
-		border-color: var(--color_primany_001);
-		&:after {
-			scale: 1.1;
-			background-color: var(--color_primany_007);
-		}
-	}
-	
-	&:after {
-		content: "";
-		position: absolute;
-		top: 4px;
-		left: 4px;
-		width: 14px;
-		height: 14px;
-		background: var(--color_primany_002);
-		border-radius: 14px;
-		transition: 0.2s;
 	}
 }
