@@ -13,3 +13,11 @@
 .shadow-10x100 {
 	box-shadow: 0px 10px 100px 10px rgba(25, 24, 37, 0.5);
 }
+
+// shape
+.shape {
+	background: linear-gradient(183deg, #191825 77%, transparent 77.1%),transparent;
+}
+.shape-bottom {
+	background: linear-gradient(183deg, transparent 30%, #191825 30.1%), transparent;
+}
