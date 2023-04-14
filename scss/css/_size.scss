@@ -15,6 +15,14 @@
 	min-width: 100%;
 }
 
+.max-w-225 {
+	max-width: 225px;
+}
+
+.min-w-350 {
+	min-width: 350px;
+}
+
 // MAX WIDTH LOCK
 
 .max-w-1540px {
@@ -110,3 +118,6 @@
 
 // MAX HEIGHT
 
+.max-h-300px {
+	max-height: 300px;
+}

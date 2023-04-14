@@ -36,9 +36,9 @@ button:not([disabled]) {
 }
 
 .bloop {
-	transition: transform 200ms linear;
+	transition: transform 100ms linear;
 	&:hover {
 		cursor: pointer;
-		transform: scale(1.03);
+		transform: scale(1.02);
 	}
 }
